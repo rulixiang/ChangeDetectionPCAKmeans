@@ -1,13 +1,12 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Code for "Unsupervised Change Detection in 
 % Satellite Images Using Principal Component
 % Analysis and k-Means Clustering"
 %
 % <http://ieeexplore.ieee.org/document/5196726/>
 % 
-% Created on Thu Dec 7 2017
-% @author: rulixiang
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Created on Thu Dec 7 2017, @author: rulixiang
+
 clear;clc
 close all
 img_dir='D:/data/EROS_Data';
