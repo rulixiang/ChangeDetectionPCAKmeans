@@ -9,11 +9,12 @@
 
 clear;clc
 close all
-img_dir='D:/data/EROS_Data';
+img_dir='./EROS_Data';
 aa=dir(img_dir);
 
 for k1=3:length(aa)
     img=aa(k1).name;
+    disp(['Processing area-',img,' ...'])
     im1=imread([img_dir,'/',img,'/',img,'_1986.png']);
     im2=imread([img_dir,'/',img,'/',img,'_1992.png']);
     bm=imread([img_dir,'/',img,'/',img,'_change.png']);
@@ -22,9 +23,6 @@ for k1=3:length(aa)
     im2=rgb2gray(im2);
     bm=rgb2gray(bm);
 
-
-    
-    
     figure
     subplot(121)
     imshow(im1)
@@ -38,9 +36,9 @@ for k1=3:length(aa)
     for k2=1:length(BLOCK)
         subplot(150+k2)
         if(k2==1)
-            imshow(1-PCAKmeans_v2(im1,im2,bm,BLOCK(k2)))
+            imshow(1-PCAKmeans_v2(im1,im2,BLOCK(k2)))
         else
-            imshow(PCAKmeans_v2(im1,im2,bm,BLOCK(k2)))
+            imshow(PCAKmeans_v2(im1,im2,BLOCK(k2)))
         end
         title(['h=',num2str(k2*2)])
 

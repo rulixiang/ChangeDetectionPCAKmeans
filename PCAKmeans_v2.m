@@ -1,7 +1,7 @@
-function cm=PCAKmeans_v2(im1,im2,bm,BLOCK)
+function cm=PCAKmeans_v2(im1,im2,BLOCK)
 im1=double(im1);
 im2=double(im2);
-bm=double(bm);
+% bm=double(bm);
 Ratio=0.95;
 
 delta=abs(im1-im2);
@@ -13,8 +13,8 @@ DD=[Z1,delta,Z1];
 DD=[Z2;DD;Z2];
 delta=DD;
 X=[];
-for k1=1:size(bm,1)
-    for k2=1:size(bm,2)
+for k1=1:size(im1,1)
+    for k2=1:size(im1,2)
         Vk=DD(k1:k1+BLOCK-1,k2:k2+BLOCK-1);
         X=[X,reshape(Vk,[],1)];
     end
@@ -40,10 +40,10 @@ end
 Vec=V(:,k1:length(Val));
 FEATURE=(X-repmat(meanVal,1,size(X,2)))'*Vec;
 
-[CC,label]=Kmeans(FEATURE',2);
+[label,~]=kmeans(FEATURE,2);
 
 
-cm=reshape(label,size(bm));
+cm=reshape(label,size(im1));
 cm=cm'-1;
 
 
