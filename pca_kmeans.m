@@ -1,7 +1,7 @@
 function [change_map] = pca_kmeans(im1,im2,block_size,rate)
 %% [change_map] = pca_kmeans(im1,im2,block_size,rate)
-% im1: Input image for time 1 with asize of [m,n,k];
-% im2: Input image for time 2 with asize of [m,n,k];
+% im1: Input image for time 1 with size of [m,n,k];
+% im2: Input image for time 2 with size of [m,n,k];
 % block_size: Size of block;
 % rate: Proportion of the Pricipal Components;
 %
