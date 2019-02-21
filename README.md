@@ -1,6 +1,6 @@
 # ChangeDetectionPCAKmeans
 
-MATLAB implementation for paper "Unsupervised Change Detection in Satellite Images Using Principal Component Analysis and k-Means Clustering". You can download the data from [USGS](https://geochange.er.usgs.gov/sw/changes/natural/reno-tahoe/).
+MATLAB implementation for paper [Unsupervised Change Detection in Satellite Images Using Principal Component Analysis and k-Means Clustering](https://ieeexplore.ieee.org/document/5196726/).
 
 ## Burn area
 ### Input images of Burn area
